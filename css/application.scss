@@ -1,8 +1,13 @@
+$navDarkBg: #292929;
+
 @import 'base';
 
 @import 'base';
+
+
 
 /* Mobile first queries */
+
 
 .button {
     color: white;
@@ -11,6 +16,7 @@
 .container {
     padding: 0;
 }
+
 #themeBox {
     color: white;
     margin: auto;
