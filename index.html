@@ -7,6 +7,7 @@
     <title>Sales Force | Home</title>
     <link rel="stylesheet" type="text/css" href="fonts/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link rel="stylesheet" type="text/css" href="css/vendors/preloader.css">
     <link rel="stylesheet" type="text/css" href="css/lightTheme.css">
     <link rel="stylesheet" type="text/css" href="css/darkTheme.css">
     <link rel="stylesheet" type="text/css" href="css/application.css">
@@ -14,42 +15,175 @@
 </head>
     
 <body>
-    
+    	
 <div id="app"> <link rel="stylesheet" v-bind:href="current_template.value">
     <main role="main" v-bind:class="current_template.name">
         <div class="container main-wrapper">
             <div class="row u-full-width">
-
+          
                 <div class="content-main twelve columns">
                     <div class="topnav twelve columns" id="myTopnav">
-                        <a href="index.html"> <i class="fa fa-tachometer" aria-hidden="true"> </i> Dash Home </a>
-                            <a href="data.html"><i class="fa fa-list" aria-hidden="true"></i> <span>Sales Data</span></a>
+                        <a href="index.html"> <i class="fa fa-tachometer" aria-hidden="true"> </i> SALESFORCEDASH </a>
+                            <a href="#salesAnc"><i class="fa fa-list" aria-hidden="true"></i> <span>Sales Data</span></a>
+                            <a href="#repAnc"><i class="fa fa-line-chart" aria-hidden="true"></i> <span>Sales Agent Stats</span></a>
+                            <a href="#tarAnc"><i class="fa fa-pie-chart" aria-hidden="true"></i> <span>Goals And Target </span></a>
+                            <a>
+                            <span class="themeBox"> <i class="fa fa-cogs" aria-hidden="true"></i>  Theme
+                                <template v-for="template in templates">
+                                    <button v-on:click="setTemplate(template.id)">
+                                        <span  v-if="template.id == default_template"></span>
+                                       <i class="fa fa-eyedropper" aria-hidden="true"></i> {{ template.name }}
+                                    </button>
+                                </template>
+                            </span>
+                            </a>
                         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
                     </div>
                 </div>
                 
-                <div class="themeBar twelve columns">
-                    <span class="themeBox">
-                        <template v-for="template in templates">
-                            <button v-on:click="setTemplate(template.id)">
-                                <span  v-if="template.id == default_template"></span>
-                                {{ template.name }}
-                            </button>
-                        </template>
-                    </span>
-                </div>
-                
-                <hr class="darkHr">
+                <hr class="longHr" id="salesAnc">
 
                 <h4> {{salesOverview}}</h4>
 
                 <hr class="shortHr">
+                
+                <div class="summary-container twelve columns">
+                    <div class="summary-box-1 twelve columns">
+                        <h6>
+                            {{totalSales}}
+                        </h6>
 
+                        <div class="summary-box-heading">
+                            <h1>
+                                {{totalSalesValue}}
+                            </h1>
+                        </div>
+                    </div>
+
+                    <div class="summary-box-1 twelve columns">
+                        <h6>
+                            {{coTarget}}
+                        </h6>
+
+                        <div class="summary-box-heading red">
+                            <h1>
+                                {{coTargetValue}}
+                            </h1>
+                        </div>
+                    </div>
+
+                    <div class="summary-box-1 twelve columns">
+                        <h6>
+                            {{reqSales}}
+                        </h6>
+
+                        <div class="summary-box-heading">
+                            <h1>
+                                {{reqSalesValue}}
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                
+                <hr class="longHr">
+                
+                <h4> {{salesAnalytics}}</h4>
+
+                <hr class="shortHr">
+
+               <div class="ct-chart twelve columns" id="chartId1"></div>
+                
+                <hr class="longHr"  id="repAnc">
+                
+                <h4> {{indivSales}} </h4>
+                
+                <hr class="shortHr">
+
+                <div class="summary-container twelve columns">
+
+                    <div class="summary-box-1 twelve columns">
+                        <h6>
+                            {{paulSales}}
+                        </h6>
+
+                        <div class="summary-box-heading red">
+                            <h1>
+                                {{paulSalesValue}}
+                            </h1>
+                        </div>
+                    </div>
+
+                    <div class="summary-box-1 twelve columns">
+                        <h6>
+                            {{samanthaSales}}
+                        </h6>
+
+                        <div class="summary-box-heading">
+                            <h1>
+                                {{samanthaSalesValue}}
+                            </h1>
+                        </div>
+                    </div>
+
+                    <div class="summary-box-1 twelve columns">
+                        <h6>
+                            {{lukeSales}}
+                        </h6>
+
+                        <div class="summary-box-heading">
+                            <h1>
+                                {{lukeSalesValue}}
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="longHr">
+                
+                <h4> {{repAnalytics}}</h4>
+
+                <hr class="shortHr">
+
+                <div class="ct-chart twelve columns" id="chartId2"></div>
+
+                <hr class="longHr" id="tarAnc">
+                
+                                <h4> {{targetAndGoals}}</h4>
+                    
+                <hr class="shortHr">
+                
+                <div class="summary-container twelve columns">
+                                
+                    <div class="summary-box-1 twelve columns">
+                        <h6> {{paulTarget}} {{paulTargetValue}}  </h6>
+                         <h6> {{paulReqSales}} {{paulReqSalesValue}}  </h6>
+                        <div class="summary-box-1 twelve columns">
+                            <div class="ct-chart  twelve columns" id="chartId3"></div>
+                        </div>
+                    </div>
+
+                    <div class="summary-box-1 twelve columns">
+                        <h6> {{samanthaTarget}} {{samanthaTargetValue}}  </h6>
+                         <h6> {{samanthaReqSales}} {{samanthaReqSalesValue}}  </h6>
+                        <div class="summary-box-1 twelve columns">
+                            <div class="ct-chart  twelve columns" id="chartId4"></div>
+                        </div>
+                    </div>
+
+                    <div class="summary-box-1 twelve columns">
+                        <h6> {{lukeTarget}} {{lukeTargetValue}}  </h6>
+                         <h6> {{lukeReqSales}} {{lukeReqSalesValue}}  </h6>
+                        <div class="summary-box-1 twelve columns">
+                            <div class="ct-chart  twelve columns" id="chartId5"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="darkHr">
             </div>
         </div>
     </main>
 </div>
-
     <script src="js/jquery.min.js"></script>
     <script src="https://unpkg.com/vue"></script>
     <script src="https://unpkg.com/vue-meta@1.2.0/lib/vue-meta.js"></script>

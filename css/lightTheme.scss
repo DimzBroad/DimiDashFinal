@@ -6,7 +6,7 @@
 
 .themeBox {
     color: $primaryWhite;
-}s
+}
 
 .themeBar {
     background-color: $primaryBlack;
@@ -21,11 +21,11 @@
 }
 
 .summary-box-heading {
-    color: $primaryRed;
+    color: $primaryPurple;
 }
 
 .summary-box-1 {
-    color: $primaryWhite;
+    color: $primaryBlack;
 }
 
 .button {
@@ -37,23 +37,32 @@
 }
 
 .longHr {
-    color: $secondaryBlue;
-    background-color: $secondaryBlue;
+    color: $secondaryPurple;
+    background-color: $secondaryPurple;
 }
 
 .shortHr {
-    color: $primaryRed;
-    background-color: $primaryRed;
+    color: $primaryPurple;
+    background-color: $primaryPurple;
 }
 
-h4 {
-    color: $primaryBlack;
-}
-
-h2 {
-    color: $primaryRed;
-}
 
 .button {
     color: $primaryWhite;
 }
+
+h1 {
+    color: $primaryPurple;
+}
+
+h4{
+    color: $primaryBlack;
+}
+
+
+
+
+
+
+
+

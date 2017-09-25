@@ -21,9 +21,6 @@
 .summary-box-1 {
   color: #ffffff; }
 
-.button {
-  color: #ffffff; }
-
 .button:hover {
   color: #E74C3C; }
 
@@ -35,13 +32,40 @@
   color: #E74C3C;
   background-color: #E74C3C; }
 
-h4 {
-  color: #E74C3C; }
-
-h2 {
-  color: #E74C3C; }
-
 .button {
   color: #ffffff; }
+
+h4 {
+  color: #ffffff; }
+
+.ct-series-a .ct-line {
+  stroke: #E74C3C; }
+
+.ct-series-a .ct-point {
+  stroke: #E74C3C; }
+
+.ct-series-b .ct-line {
+  stroke: #F39C12; }
+
+.ct-series-b .ct-point {
+  stroke: #F39C12; }
+
+.ct-series-c .ct-line {
+  stroke: #F1C40F; }
+
+.ct-series-c .ct-point {
+  stroke: #F1C40F; }
+
+/* Pie charts consist of solid slices where you can use this selector to override the default style. */
+.ct-series-a .ct-slice-pie {
+  /* fill of the pie slieces */
+  fill: #E74C3C;
+  /* give your pie slices some outline or separate them visually by using the background color here */ }
+
+/* Pie charts consist of solid slices where you can use this selector to override the default style. */
+.ct-series-b .ct-slice-pie {
+  /* fill of the pie slieces */
+  fill: #F39C12;
+  /* give your pie slices some outline or separate them visually by using the background color here */ }
 
 /*# sourceMappingURL=darkTheme.css.map */

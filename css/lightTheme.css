@@ -6,21 +6,20 @@
 .themeBox {
   color: #ffffff; }
 
-s
 .themeBar {
   background-color: #292929; }
 
 .main-wrapper {
-  background-color: #85929E; }
+  background-color: #C6D0DA; }
 
 .content-main {
-  background-color: #85929E; }
+  background-color: #C6D0DA; }
 
 .summary-box-heading {
-  color: #E74C3C; }
+  color: #443F6A; }
 
 .summary-box-1 {
-  color: #ffffff; }
+  color: #292929; }
 
 .button {
   color: #ffffff; }
@@ -29,20 +28,20 @@ s
   color: #2E3E45; }
 
 .longHr {
-  color: #3A5258;
-  background-color: #3A5258; }
+  color: #97A7B8;
+  background-color: #97A7B8; }
 
 .shortHr {
-  color: #E74C3C;
-  background-color: #E74C3C; }
-
-h4 {
-  color: #292929; }
-
-h2 {
-  color: #E74C3C; }
+  color: #443F6A;
+  background-color: #443F6A; }
 
 .button {
   color: #ffffff; }
+
+h1 {
+  color: #443F6A; }
+
+h4 {
+  color: #292929; }
 
 /*# sourceMappingURL=lightTheme.css.map */
