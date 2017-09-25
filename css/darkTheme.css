@@ -1,3 +1,47 @@
+@import url(vendors/skeleton.css);
+@import url(vendors/normalize.css);
+.container {
+  padding: 0; }
 
+.themeBox {
+  color: #ffffff; }
+
+.themeBar {
+  background-color: #292929; }
+
+.main-wrapper {
+  background-color: #2E3E45; }
+
+.content-main {
+  background-color: #2E3E45; }
+
+.summary-box-heading {
+  color: #E74C3C; }
+
+.summary-box-1 {
+  color: #ffffff; }
+
+.button {
+  color: #ffffff; }
+
+.button:hover {
+  color: #E74C3C; }
+
+.longHr {
+  color: #3A5258;
+  background-color: #3A5258; }
+
+.shortHr {
+  color: #E74C3C;
+  background-color: #E74C3C; }
+
+h4 {
+  color: #E74C3C; }
+
+h2 {
+  color: #E74C3C; }
+
+.button {
+  color: #ffffff; }
 
 /*# sourceMappingURL=darkTheme.css.map */

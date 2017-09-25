@@ -1,0 +1,59 @@
+@import 'base';
+
+.container {
+    padding: 0;
+}
+
+.themeBox {
+    color: $primaryWhite;
+}
+
+.themeBar {
+    background-color: $primaryBlack;
+}
+
+.main-wrapper {
+    background-color: $primaryBlue;
+}
+
+.content-main {
+    background-color: $primaryBlue;
+}
+
+.summary-box-heading {
+    color: $primaryRed;
+}
+
+.summary-box-1 {
+    color: $primaryWhite;
+}
+
+.button {
+    color: $primaryWhite;
+}
+
+.button:hover {
+    color: $primaryRed;
+}
+
+.longHr {
+    color: $secondaryBlue;
+    background-color: $secondaryBlue;
+}
+
+.shortHr {
+    color: $primaryRed;
+    background-color: $primaryRed;
+}
+
+h4 {
+    color: $primaryRed;
+}
+
+h2 {
+    color: $primaryRed;
+}
+
+.button {
+    color: $primaryWhite;
+}

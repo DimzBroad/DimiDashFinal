@@ -1,16 +1,15 @@
-$navDarkBg: #292929;
-$navDarkBgHover: #E74C3C;
-$fontWhite: #ffffff;
+@import 'base';
+
 
 .topnav {
   overflow: hidden;
-  background-color: $navDarkBg;
+  background-color: $primaryBlack;
 }
 
 .topnav a {
   float: left;
   display: block;
-  color: $fontWhite;
+  color: $primaryWhite;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -18,7 +17,7 @@ $fontWhite: #ffffff;
 }
 
 .topnav a:hover {
-  color: $navDarkBgHover;
+  color: $primaryRed;
 }
 
 .topnav .icon {

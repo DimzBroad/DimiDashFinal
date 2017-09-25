@@ -15,8 +15,7 @@
     
 <body>
     
-<div id="app">
-<link rel="stylesheet" v-bind:href="current_template.value">
+<div id="app"> <link rel="stylesheet" v-bind:href="current_template.value">
     <main role="main" v-bind:class="current_template.name">
         <div class="container main-wrapper">
             <div class="row u-full-width">
@@ -25,10 +24,26 @@
                     <div class="topnav twelve columns" id="myTopnav">
                         <a href="index.html"> <i class="fa fa-tachometer" aria-hidden="true"> </i> Dash Home </a>
                             <a href="data.html"><i class="fa fa-list" aria-hidden="true"></i> <span>Sales Data</span></a>
-                            <a href="#"><i class="fa fa-cog" aria-hidden="true"></i> <span>Settings</span></a>
                         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
                     </div>
                 </div>
+                
+                <div class="themeBar twelve columns">
+                    <span class="themeBox">
+                        <template v-for="template in templates">
+                            <button v-on:click="setTemplate(template.id)">
+                                <span  v-if="template.id == default_template"></span>
+                                {{ template.name }}
+                            </button>
+                        </template>
+                    </span>
+                </div>
+                
+                <hr class="darkHr">
+
+                <h4> {{salesOverview}}</h4>
+
+                <hr class="shortHr">
 
             </div>
         </div>
